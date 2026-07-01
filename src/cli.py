@@ -23,6 +23,7 @@ def main():
     with open(args.out, 'w', encoding='utf-8') as fh:
         json.dump(res, fh, indent=2, ensure_ascii=False)
     print('Wrote', args.out)
+    print(json.dumps(res, indent=2, ensure_ascii=False))
 
 
 if __name__ == '__main__':
