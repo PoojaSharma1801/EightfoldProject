@@ -1,0 +1,12 @@
+Alice Smith
+Senior Engineer
+Acme Corp
+
+Email: alice.smith@example.com
+Phone: +1 (415) 555-1234
+
+Skills:
+Python, SQL, Docker
+
+Experience:
+- Acme Corp — Senior Engineer (2019-2024)

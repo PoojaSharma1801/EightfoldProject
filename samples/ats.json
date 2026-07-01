@@ -1,0 +1,9 @@
+[
+  {
+    "candidateName": "Alice Smith",
+    "emails": ["alice.smith@example.com"],
+    "phone": "+14155551234",
+    "skills": ["Python", "SQL"],
+    "headline": "Senior Engineer at Acme"
+  }
+]

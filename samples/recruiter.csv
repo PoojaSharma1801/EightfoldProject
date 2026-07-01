@@ -1,0 +1,3 @@
+name,email,phone,company,title,skills
+"Alice Smith",alice.smith@example.com,"+1 415-555-1234","Acme Corp","Senior Engineer","Python;SQL"
+"Bob Jones",bob.jones@example.com,4155555678,"OtherCo","Developer","Java;Go"

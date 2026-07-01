@@ -1,0 +1,17 @@
+# Virtual env
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# VS Code
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# Editor temp files
+*.swp
+*.swo

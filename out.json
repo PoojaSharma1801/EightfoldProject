@@ -1,0 +1,62 @@
+{
+  "candidate_id": null,
+  "full_name": "Alice Smith",
+  "emails": [
+    "alice.smith@example.com",
+    "bob.jones@example.com"
+  ],
+  "phones": [
+    "+14155551234",
+    "4155555678"
+  ],
+  "location": {
+    "city": null,
+    "region": null,
+    "country": null
+  },
+  "links": {},
+  "headline": "Senior Engineer",
+  "years_experience": null,
+  "skills": [
+    "Python",
+    "SQL",
+    "Java",
+    "Go",
+    "Docker"
+  ],
+  "experience": [],
+  "education": [],
+  "provenance": [
+    {
+      "source": "recruiter_csv",
+      "fields": [
+        "full_name",
+        "emails",
+        "phones",
+        "headline",
+        "skills",
+        "skills"
+      ]
+    },
+    {
+      "source": "recruiter_csv",
+      "fields": [
+        "emails",
+        "phones",
+        "skills",
+        "skills"
+      ]
+    },
+    {
+      "source": "ats_json",
+      "fields": []
+    },
+    {
+      "source": "resume_text",
+      "fields": [
+        "skills"
+      ]
+    }
+  ],
+  "overall_confidence": 0.65
+}
