@@ -3,6 +3,31 @@ import json
 from typing import List, Dict, Any
 
 
+def read_pdf_text(path: str) -> str:
+    """Read text from a PDF when possible, with a safe binary fallback."""
+    try:
+        from pypdf import PdfReader
+    except Exception:
+        PdfReader = None
+
+    if PdfReader is not None:
+        try:
+            reader = PdfReader(path)
+            parts = []
+            for page in reader.pages:
+                page_text = page.extract_text() or ""
+                if page_text:
+                    parts.append(page_text)
+            if parts:
+                return "\n".join(parts)
+        except Exception:
+            pass
+
+    with open(path, 'rb') as fh:
+        raw = fh.read()
+    return raw.decode('utf-8', errors='ignore')
+
+
 def read_recruiter_csv(path: str) -> List[Dict[str, Any]]:
     out = []
     with open(path, newline='', encoding='utf-8') as fh:
@@ -20,8 +45,11 @@ def read_ats_json(path: str) -> List[Dict[str, Any]]:
 
 
 def read_text_resume(path: str) -> List[Dict[str, Any]]:
-    with open(path, encoding='utf-8') as fh:
-        text = fh.read()
+    if path.lower().endswith('.pdf'):
+        text = read_pdf_text(path)
+    else:
+        with open(path, encoding='utf-8', errors='ignore') as fh:
+            text = fh.read()
     return [{"source": "resume_text", "raw": {"text": text}}]
 
 
